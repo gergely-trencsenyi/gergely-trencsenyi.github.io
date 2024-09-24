@@ -34,3 +34,46 @@ hom_btn.forEach(button => {
         Home();
       });;
 });
+
+// Your NASA API key
+const apiKey = 'H8DX89OG8TeYGXFCEEPy3zbsGzsIdGTo3LlGJA0M';
+const baseUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+
+// Function to fetch APOD data
+async function fetchApod(imageId, date) {
+    try {
+        const response = await fetch(`${baseUrl}&date=${date}`);
+        const data = await response.json();
+        document.getElementById(imageId).src = data.url;
+        document.getElementById(imageId).alt = data.title;
+        if (data.copyright){
+            document.getElementById(imageId).title = "Tulajdonos: " + data.copyright;}
+        else{
+            document.getElementById(imageId).title = "Ismeretlen tulajdonos" ;};
+    } catch (error) {
+        console.error('Error fetching APOD data:', error);
+    }
+}
+
+// Function to get the date in YYYY-MM-DD format
+function formatDate(date) {
+    return date.toISOString().split('T')[0];
+}
+
+// Function to load APOD images from the last 7 days
+function loadApodImages() {
+    const today = new Date();
+    for (let i = 0; i < 7; i++) {  
+        const pastDate = new Date(today);
+        pastDate.setDate(today.getDate() - i); 
+        const formattedDate = formatDate(pastDate);
+        fetchApod(`apod${i + 1}`, formattedDate);
+    }
+}
+// Load images on page load
+window.onload = loadApodImages;        
+
+
+
+
+
