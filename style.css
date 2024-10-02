@@ -1,1 +1,118 @@
-body{background-color: #66d992;}
+/* Base styles for mobile devices (default) */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding-top: 150px;
+    background-color: #66d992;
+}
+
+div {    
+    width: 50vw;
+    margin: auto;
+    border-width: 50vw;
+    border: 1px solid #777;
+}
+
+button {
+    background-color: #95d2ac;
+    color: #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+header, section, footer, div {
+    padding: 10px;
+    text-align: center;
+}
+
+#top {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #66d992;
+}
+
+#bottom {
+    position: fixed;
+    bottom: 0px;
+    height: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #66d992;
+    z-index: 1000;
+}
+
+
+#cim {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #777;
+    width: 50vw;
+    background-color: #95d2ac;
+}
+
+.hom_btn {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+
+.footer {
+    height: 50px;
+}
+
+#gal {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0, auto;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: row;
+  }
+    
+#gal img {
+    width: 100%;
+    height: auto;
+  }
+/* Media Query for tablets (min-width: 768px) */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+/* Media Query for desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    div {
+        max-width: 1200px;
+        padding-top: 30px;
+    }
+}
