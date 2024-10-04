@@ -2,15 +2,19 @@
 body {
     font-size: 16px;
     margin: 0;
-    padding-top: 150px;
+    padding-top: 125px;
     background-color: #66d992;
 }
 
 div {    
-    width: 50vw;
+    width: 100vw;
     margin: auto;
     border-width: 50vw;
     border: 1px solid #777;
+}
+
+img {
+    max-width: 70vw;
 }
 
 button {
@@ -50,20 +54,22 @@ header, section, footer, div {
     bottom: 0px;
     height: 45px;
     left: 50%;
+    width: 100vw;
     transform: translateX(-50%);
     width: 100%;
-    background-color: #66d992;
+    background-color: #95d2ac;
     z-index: 1000;
+    border: 1px solid #777;
 }
 
 
 #cim {
     position: fixed;
-    top: 10px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     border: 1px solid #777;
-    width: 50vw;
+    width: 100vw;
     background-color: #95d2ac;
 }
 
@@ -96,12 +102,27 @@ header, section, footer, div {
 @media (min-width: 768px) {
     body {
         font-size: 18px;
+        padding-top: 140px;
+    }
+    
+    #cim {
+        width: 50vw;
     }
 
+    #bottom {
+        width: 50vw;
+    }
+
+
     div {
+        width: 50vw;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+
+    img {
+        max-width: 80vw;
     }
 }
 
