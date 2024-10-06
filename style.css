@@ -14,7 +14,7 @@ div {
 }
 
 img {
-    max-width: 60vw !important;
+    max-width: 80vw;
 }
 
 #portre {
@@ -90,7 +90,7 @@ header, section, footer, div {
 }
 
 .bigfooter {
-    height: 300px;
+    height: 500px;
 }
 
 #gal {
