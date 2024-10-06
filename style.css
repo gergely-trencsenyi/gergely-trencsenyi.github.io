@@ -14,7 +14,11 @@ div {
 }
 
 img {
-    max-width: 70vw;
+    max-width: 60vw !important;
+}
+
+#portre {
+    width: 50vw;
 }
 
 button {
@@ -85,6 +89,10 @@ header, section, footer, div {
     height: 50px;
 }
 
+.bigfooter {
+    height: 300px;
+}
+
 #gal {
     display: flex;
     flex-wrap: wrap;
@@ -123,6 +131,10 @@ header, section, footer, div {
 
     img {
         max-width: 80vw;
+    }
+
+    #portre {
+        width: 20vw;
     }
 }
 
