@@ -51,6 +51,7 @@ header, section, footer, div {
     transform: translateX(-50%);
     width: 100%;
     background-color: #66d992;
+    border: none;
 }
 
 #bottom {
